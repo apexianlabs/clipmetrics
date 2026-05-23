@@ -19,23 +19,6 @@ const STAGE_CONFIG = {
   archived:    { label:'Archived',    color:'#ef4444', bg:'rgba(239,68,68,0.1)'   },
 }
 
-const Logo = ({ size = 32 }) => (
-  <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="cm1" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#f472b6"/>
-        <stop offset="100%" stopColor="#be185d"/>
-      </linearGradient>
-    </defs>
-    <rect x="28" y="10" width="44" height="80" rx="10" fill="url(#cm1)"/>
-    <rect x="32" y="18" width="36" height="56" rx="5" fill="#831843"/>
-    <path d="M44 34 L44 58 L64 46 Z" fill="white" opacity="0.9"/>
-    <rect x="33" y="78" width="7" height="5" rx="1" fill="white" opacity="0.5"/>
-    <rect x="43" y="76" width="7" height="7" rx="1" fill="white" opacity="0.6"/>
-    <rect x="53" y="74" width="7" height="9" rx="1" fill="white" opacity="0.8"/>
-  </svg>
-)
-
 const Icon = ({ name, size=16, color='currentColor' }) => {
   const icons = {
     doc:      <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></>,
@@ -150,7 +133,7 @@ export default function DashboardPage() {
   const Sidebar = () => (
     <div style={{width:220,background:'linear-gradient(180deg,#0a0f2e 0%,#0f172a 100%)',display:'flex',flexDirection:'column',padding:'20px 12px',height:'100vh',position:'sticky',top:0,flexShrink:0,overflowX:'hidden'}}>
       <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:28,paddingLeft:8}}>
-        <Logo size={28}/>
+        <div style={{width:28,height:28,borderRadius:7,background:COLOR,display:'flex',alignItems:'center',justifyContent:'center',fontSize:13,fontWeight:800,color:'#fff',flexShrink:0}}>{PRODUCT_INITIAL}</div>
         <span style={{fontSize:14,fontWeight:800,color:'#fff',letterSpacing:'-0.3px'}}>{PRODUCT_NAME}</span>
       </div>
       <button onClick={() => setCmdOpen(true)} style={{display:'flex',alignItems:'center',gap:8,padding:'7px 10px',borderRadius:7,background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.06)',cursor:'pointer',marginBottom:14,width:'100%'}}>
