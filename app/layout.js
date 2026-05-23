@@ -1,4 +1,5 @@
 export const metadata = {
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   title: 'ClipMetrics — AI social video analytics — know what works before you post',
   description: 'AI social video analytics — know what works before you post',
 }
